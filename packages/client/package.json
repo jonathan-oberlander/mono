@@ -1,0 +1,19 @@
+{
+	"name": "@mono/client",
+	"module": "index.ts",
+	"type": "module",
+	"scripts": {
+		"build": "tsc",
+		"start": "node ./dist/index.js",
+		"dev": "tsx watch src/index.ts"
+	},
+	"dependencies": {
+		"@mono/env": "^1.0.0",
+		"axios": "^1.8.4",
+		"typescript": "^5.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "latest",
+		"tsx": "^4.7.1"
+	}
+}

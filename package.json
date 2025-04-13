@@ -1,0 +1,14 @@
+{
+  "name": "mono",
+  "workspaces": [
+    "packages/*",
+    "modules/*"
+  ],
+  "scripts": {
+    "dev:client": "cd packages/client && npm run dev",
+    "dev:server": "cd packages/server && npm run dev"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4"
+  }
+}
