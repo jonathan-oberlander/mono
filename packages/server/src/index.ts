@@ -101,7 +101,18 @@ app.use(
 app.get('/api/user', c => {
   const id = c.req.query('id')
   console.log(Object.values(tokenStore).map(entry => entry.token))
-  return c.json({ name: `Sandra ${id}` })
+
+  const getUser = (id = '') => {
+    const u: Record<string, string> = {
+      '123': 'Sandra',
+      '456': 'Martin',
+      '789': 'Aman',
+    }
+
+    return u[id]
+  }
+
+  return c.json({ name: getUser(id), id })
 })
 
 serve(
